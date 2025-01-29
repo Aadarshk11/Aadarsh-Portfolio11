@@ -3,6 +3,9 @@ import React, { useState, useEffect } from "react";
 import { AppBar, Toolbar, Typography, Button, IconButton, Drawer, Box, useScrollTrigger } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
+import Avatar from '@mui/material/Avatar';
+import Stack from '@mui/material/Stack';
+import { blue } from "@mui/material/colors";
 
 // Custom theme with gradient and custom font
 const theme = createTheme({
@@ -69,12 +72,14 @@ const Header = () => {
           }}
         >
           <Toolbar>
-            {/* Logo or Branding */}
-            <Typography variant="h6" sx={{ flexGrow: 1, color: theme.palette.secondary.main }}>
-              <Box component="span" sx={{ fontWeight: 700, letterSpacing: 1.5 }}>
-                My Portfolio
-              </Box>
-            </Typography>
+          <Typography variant="h6" sx={{ flexGrow: 1, color: theme.palette.secondary.main }}>
+  <Box component="span" sx={{ fontWeight: 700, letterSpacing: 1.5, display: 'flex', alignItems: 'center' }}>
+    <Stack direction="row" spacing={1} alignItems="center">
+      <Avatar sx={{ bgcolor: blue[900], fontWeight: 700 }}>AK</Avatar>
+      Aadarsh Kasturey
+    </Stack>
+  </Box>
+</Typography>
 
             {/* Desktop Navigation (hidden on mobile) */}
             {!isMobile && (
