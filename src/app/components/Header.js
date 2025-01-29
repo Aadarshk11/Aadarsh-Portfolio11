@@ -75,11 +75,14 @@ const Header = () => {
                 <Button color="inherit" href="#about" sx={{ fontWeight: 600 }}>
                   About Me
                 </Button>
+                <Button color="inherit" href="#skills" sx={{ fontWeight: 600 }}>
+                  Skills
+                </Button>
                 <Button color="inherit" href="#projects" sx={{ fontWeight: 600 }}>
                   Projects
                 </Button>
-                <Button color="inherit" href="#resume" sx={{ fontWeight: 600 }}>
-                  Resume
+                <Button color="inherit" href="#contact" sx={{ fontWeight: 600 }}>
+                  Contact Me
                 </Button>
               </Box>
             )}
@@ -126,6 +129,22 @@ const Header = () => {
           <Button
             fullWidth
             variant="text"
+            href="#skills"
+            onClick={closeDrawer}
+            sx={{
+              color: theme.palette.secondary.main,
+              "&:hover": {
+                backgroundColor: "rgba(255, 255, 255, 0.1)",
+              },
+              marginBottom: 1,
+              fontWeight: 600,
+            }}
+          >
+            Skills
+          </Button>
+          <Button
+            fullWidth
+            variant="text"
             href="#projects"
             onClick={closeDrawer}
             sx={{
@@ -142,7 +161,7 @@ const Header = () => {
           <Button
             fullWidth
             variant="text"
-            href="#resume"
+            href="#contact"
             onClick={closeDrawer}
             sx={{
               color: theme.palette.secondary.main,
@@ -153,7 +172,7 @@ const Header = () => {
               fontWeight: 600,
             }}
           >
-            Resume
+            Contact Me
           </Button>
         </Box>
       </Drawer>
