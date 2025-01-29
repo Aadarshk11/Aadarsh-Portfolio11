@@ -60,7 +60,14 @@ const Header = () => {
   return (
     <ThemeProvider theme={theme}>
       <ElevationScroll>
-        <AppBar position="sticky" sx={{ background: "linear-gradient(45deg, #1a1a1a, #333)" }}>
+        <AppBar
+          position="sticky"
+          sx={{
+            background: "linear-gradient(45deg, #1a1a1a, #333)",
+            boxShadow: "0 4px 12px rgba(0, 0, 0, 0.5)", // Subtle shadow effect
+            transition: "all 0.3s ease-in-out", // Smooth transition for background change
+          }}
+        >
           <Toolbar>
             {/* Logo or Branding */}
             <Typography variant="h6" sx={{ flexGrow: 1, color: theme.palette.secondary.main }}>
@@ -72,16 +79,60 @@ const Header = () => {
             {/* Desktop Navigation (hidden on mobile) */}
             {!isMobile && (
               <Box sx={{ display: "flex", gap: 2 }}>
-                <Button color="inherit" href="#about" sx={{ fontWeight: 600 }}>
+                <Button
+                  color="inherit"
+                  href="#about"
+                  sx={{
+                    fontWeight: 600,
+                    transition: "0.3s ease-in-out",
+                    "&:hover": {
+                      transform: "scale(1.05)",
+                      color: "#1976d2", // Add hover color effect
+                    },
+                  }}
+                >
                   About Me
                 </Button>
-                <Button color="inherit" href="#skills" sx={{ fontWeight: 600 }}>
-                  Skills
-                </Button>
-                <Button color="inherit" href="#projects" sx={{ fontWeight: 600 }}>
+                <Button
+                  color="inherit"
+                  href="#projects"
+                  sx={{
+                    fontWeight: 600,
+                    transition: "0.3s ease-in-out",
+                    "&:hover": {
+                      transform: "scale(1.05)",
+                      color: "#1976d2", // Add hover color effect
+                    },
+                  }}
+                >
                   Projects
                 </Button>
-                <Button color="inherit" href="#contact" sx={{ fontWeight: 600 }}>
+                <Button
+                  color="inherit"
+                  href="#skills"
+                  sx={{
+                    fontWeight: 600,
+                    transition: "0.3s ease-in-out",
+                    "&:hover": {
+                      transform: "scale(1.05)",
+                      color: "#1976d2", // Add hover color effect
+                    },
+                  }}
+                >
+                  Skills
+                </Button>
+                <Button
+                  color="inherit"
+                  href="#contact"
+                  sx={{
+                    fontWeight: 600,
+                    transition: "0.3s ease-in-out",
+                    "&:hover": {
+                      transform: "scale(1.05)",
+                      color: "#1976d2", // Add hover color effect
+                    },
+                  }}
+                >
                   Contact Me
                 </Button>
               </Box>
@@ -106,6 +157,7 @@ const Header = () => {
             backgroundColor: theme.palette.primary.main,
             color: theme.palette.secondary.main,
             width: 250,
+            boxShadow: "0 4px 12px rgba(0, 0, 0, 0.3)", // Drawer shadow effect
           },
         }}
       >
@@ -119,28 +171,15 @@ const Header = () => {
               color: theme.palette.secondary.main,
               "&:hover": {
                 backgroundColor: "rgba(255, 255, 255, 0.1)",
+                transform: "scale(1.05)",
+                color: "#1976d2", // Hover effect with color change
               },
               marginBottom: 1,
               fontWeight: 600,
+              transition: "0.3s ease-in-out",
             }}
           >
             About Me
-          </Button>
-          <Button
-            fullWidth
-            variant="text"
-            href="#skills"
-            onClick={closeDrawer}
-            sx={{
-              color: theme.palette.secondary.main,
-              "&:hover": {
-                backgroundColor: "rgba(255, 255, 255, 0.1)",
-              },
-              marginBottom: 1,
-              fontWeight: 600,
-            }}
-          >
-            Skills
           </Button>
           <Button
             fullWidth
@@ -151,12 +190,34 @@ const Header = () => {
               color: theme.palette.secondary.main,
               "&:hover": {
                 backgroundColor: "rgba(255, 255, 255, 0.1)",
+                transform: "scale(1.05)",
+                color: "#1976d2", // Hover effect with color change
               },
               marginBottom: 1,
               fontWeight: 600,
+              transition: "0.3s ease-in-out",
             }}
           >
             Projects
+          </Button>
+          <Button
+            fullWidth
+            variant="text"
+            href="#skills"
+            onClick={closeDrawer}
+            sx={{
+              color: theme.palette.secondary.main,
+              "&:hover": {
+                backgroundColor: "rgba(255, 255, 255, 0.1)",
+                transform: "scale(1.05)",
+                color: "#1976d2", // Hover effect with color change
+              },
+              marginBottom: 1,
+              fontWeight: 600,
+              transition: "0.3s ease-in-out",
+            }}
+          >
+            Skills
           </Button>
           <Button
             fullWidth
@@ -167,9 +228,12 @@ const Header = () => {
               color: theme.palette.secondary.main,
               "&:hover": {
                 backgroundColor: "rgba(255, 255, 255, 0.1)",
+                transform: "scale(1.05)",
+                color: "#1976d2", // Hover effect with color change
               },
               marginBottom: 1,
               fontWeight: 600,
+              transition: "0.3s ease-in-out",
             }}
           >
             Contact Me
