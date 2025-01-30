@@ -1,38 +1,93 @@
 // src/app/components/AboutMe.js
 import React from "react";
-import { Box, Typography, Grid, Paper, Button } from "@mui/material";
+import { Box, Typography, Paper, Button } from "@mui/material";
+import { keyframes } from "@emotion/react";
+import { blue } from "@mui/material/colors";
+
+// Define a subtle fade-in animation
+const fadeIn = keyframes`
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+`;
+
+// Define a pulse animation for the button
+const pulse = keyframes`
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+`;
 
 const AboutMe = () => {
   return (
-    <Box sx={{ padding: "60px 20px", textAlign: "center" }} id="about">
-      <Typography variant="h4" sx={{ fontWeight: 600, marginBottom: 5 }}>
+    <Box
+      sx={{
+        padding: "60px 20px",
+        textAlign: "center",
+        backgroundColor: "#f9f9f9",
+        animation: `${fadeIn} 1s ease-out`,
+      }}
+      id="about"
+    >
+      <Typography variant="h4" sx={{ fontWeight: 600, marginBottom: 5, color: blue[900] }}>
         About Me
       </Typography>
-      <Grid container spacing={4}>
-        <Grid item xs={12} md={6}>
-          <Paper sx={{ padding: 4, boxShadow: 3 }}>
-            <Typography variant="body1" paragraph>
-              I'm a Full-Stack Developer with a passion for creating intuitive and
-              responsive websites. I have experience with modern web technologies like
-              React, Node.js, and more.
-            </Typography>
-            <Button variant="contained" color="secondary" sx={{ borderRadius: '20px' }}>
-              Download Resume
-            </Button>
-          </Paper>
-        </Grid>
-        <Grid item xs={12} md={6}>
-          <Box
+      <Box
+        sx={{
+          maxWidth: "800px",
+          margin: "0 auto",
+        }}
+      >
+        <Paper
+          sx={{
+            padding: 4,
+            boxShadow: 3,
+            borderRadius: "12px",
+            backgroundColor: "#28282B",
+            transition: "transform 0.3s ease, box-shadow 0.3s ease",
+            "&:hover": {
+              transform: "translateY(-10px)",
+              boxShadow: 6,
+            },
+          }}
+        >
+          <Typography variant="body1" paragraph sx={{ color: "#FFFFFF", lineHeight: 1.8 }}>
+            I'm a Full-Stack Developer with a passion for creating intuitive and responsive
+            websites. I have experience with modern web technologies like React, Node.js,
+            and more. I love solving complex problems and turning ideas into reality.
+            <br></br><br></br>My main focus is on developing scalable and efficient solutions, and I love learning new technologies. I’m always looking for exciting challenges and opportunities to collaborate with like-minded individuals.
+          </Typography>
+          <Button
+            variant="contained"
+            color="secondary"
             sx={{
-              height: "300px",
-              backgroundColor: "gray",
-              borderRadius: "8px",
-              backgroundImage: 'url("/my-photo.jpg")',
-              backgroundSize: 'cover',
+              borderRadius: "20px",
+              padding: "10px 30px",
+              fontSize: "1rem",
+              fontWeight: 600,
+              textTransform: "none",
+              
+              "&:hover": {
+                animation: "none",
+                transform: "scale(1.05)",
+              },
             }}
-          />
-        </Grid>
-      </Grid>
+          >
+            Download Resume
+          </Button>
+        </Paper>
+      </Box>
     </Box>
   );
 };

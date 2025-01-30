@@ -6,13 +6,34 @@ const HeroSection = () => {
   return (
     <Box
       sx={{
-        background: 'url("/hero-bg.jpg") center/cover no-repeat',
-        color: 'white',
-        padding: '100px 0',
-        textAlign: 'center',
-        height: '100vh',
+        backgroundImage: 'url("/kelly-sikkema-tk9RQCq5eQo-unsplash.jpg")',
+        backgroundSize: "cover",
+        backgroundPosition: "Bottom",
+        backgroundRepeat: "no-repeat",
+        color: "white",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
+        height: "105vh",
+        textAlign: "center",
+        padding: "20px",
+        
       }}
     >
+      {/* Profile Photo */}
+      <Box
+        component="img"
+        src="/gayatri-malhotra-EJWaKVPB6iI-unsplash.jpg" 
+        alt="Profile"
+        sx={{
+          width: "180px",  // Adjust size as needed
+          height: "220px",
+          objectFit: "cover", // Ensures it fits well
+          border: "3px solid white",
+          marginBottom: "15px", // Adds space between image and name
+        }}
+      />
       <Typography variant="h3" gutterBottom>
         Hello, I'm John Doe!
       </Typography>
