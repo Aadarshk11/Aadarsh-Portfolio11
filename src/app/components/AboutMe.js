@@ -38,7 +38,7 @@ const AboutMe = () => {
         backgroundColor: "#f9f9f9",
         animation: `${fadeIn} 1s ease-out`,
       }}
-      id="about"
+      id="aboutme"
     >
       <Typography variant="h4" sx={{ fontWeight: 600, marginBottom: 5, color: blue[900] }}>
         About Me
