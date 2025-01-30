@@ -7,7 +7,8 @@ import Header from "../app/components/Header";
 import HeroSection from "../app/components/HeroSection";  
 import AboutMe from "../app/components/AboutMe";    
 import Projects from "../app/components/Projects";  
-import Footer from "../app/components/Footer";      
+import Footer from "../app/components/Footer";   
+import Skills from "../app/components/Skills";   
 
 const Home = () => {
   useEffect(() => {
@@ -21,6 +22,7 @@ const Home = () => {
       <HeroSection />
       <AboutMe />
       <Projects />
+      <Skills/>
       <Footer />
     </>
   );

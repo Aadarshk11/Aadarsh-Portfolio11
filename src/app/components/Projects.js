@@ -45,6 +45,12 @@ const Projects = () => {
       image: "/pexels-lynxexotics-4143660.jpg",
       link: "#",
     },
+    {
+      title: "Project 3",
+      description: "Description for project 3.",
+      image: "/pexels-lynxexotics-4143660.jpg",
+      link: "#",
+    },
   ];
 
   const containerRef = useRef(null);
@@ -52,7 +58,7 @@ const Projects = () => {
   const scrollLeft = () => {
     if (containerRef.current) {
       containerRef.current.scrollBy({
-        left: -300,
+        left: -200,
         behavior: "smooth",
       });
     }
@@ -61,7 +67,7 @@ const Projects = () => {
   const scrollRight = () => {
     if (containerRef.current) {
       containerRef.current.scrollBy({
-        left: 300,
+        left: 200,
         behavior: "smooth",
       });
     }
@@ -127,7 +133,7 @@ const Projects = () => {
           gap: 4,
           padding: "20px 10px",
           scrollSnapType: "x mandatory",
-          maxWidth: "1200px",
+          maxWidth: "1300px",
           margin: "0 auto",
           "&::-webkit-scrollbar": {
             height: "8px",
@@ -145,7 +151,7 @@ const Projects = () => {
               minWidth: 300,
               scrollSnapAlign: "start",
               transition: "transform 0.3s ease-in-out",
-              backgroundColor: "#27272a", // Slightly lighter than background
+              backgroundColor: "#28282B", // Slightly lighter than background
               color: "white",
               "&:hover": {
                 transform: "scale(1.05)",
