@@ -1,9 +1,16 @@
-// src/app/components/Projects.js
-import React from "react";
-import { Box, Typography, Card, CardContent, CardMedia, CardActions, Button } from "@mui/material";
+import React, { useRef } from 'react';
+import { 
+  Box, 
+  Typography, 
+  Card, 
+  CardContent, 
+  CardMedia, 
+  CardActions, 
+  Button, 
+  IconButton 
+} from "@mui/material";
 import { blue, blueGrey } from "@mui/material/colors";
 import { keyframes } from "@emotion/react";
-import { IconButton } from "@mui/material";
 import { ChevronLeft, ChevronRight } from "@mui/icons-material";
 
 // Define a fade-in animation
@@ -38,27 +45,36 @@ const Projects = () => {
       image: "/pexels-lynxexotics-4143660.jpg",
       link: "#",
     },
-    {
-      title: "Project 4",
-      description: "Description for project 4.",
-      image: "/pexels-lynxexotics-4143660.jpg",
-      link: "#",
-    },
-    {
-      title: "Project 5",
-      description: "Description for project 5.",
-      image: "/pexels-lynxexotics-4143660.jpg",
-      link: "#",
-    },
   ];
+
+  const containerRef = useRef(null);
+
+  const scrollLeft = () => {
+    if (containerRef.current) {
+      containerRef.current.scrollBy({
+        left: -300,
+        behavior: "smooth",
+      });
+    }
+  };
+
+  const scrollRight = () => {
+    if (containerRef.current) {
+      containerRef.current.scrollBy({
+        left: 300,
+        behavior: "smooth",
+      });
+    }
+  };
 
   return (
     <Box
       sx={{
         padding: "60px 20px",
         textAlign: "center",
-        backgroundColor: "#f9f9f9",
+        
         animation: `${fadeIn} 1s ease-out`,
+        position: "relative",
       }}
       id="projects"
     >
@@ -66,19 +82,58 @@ const Projects = () => {
         My Projects
       </Typography>
 
-      {/* Horizontal Scrolling Container */}
+      <IconButton
+        onClick={scrollLeft}
+        sx={{
+          position: "absolute",
+          left: 10,
+          top: "50%",
+          transform: "translateY(-50%)",
+          zIndex: 1,
+          backgroundColor: "rgba(43, 40, 40, 0.42)",
+          color: "white",
+          "&:hover": {
+            backgroundColor: "rgba(255, 255, 255, 0.1)",
+          },
+        }}
+      >
+        <ChevronLeft />
+      </IconButton>
+
+      <IconButton
+        onClick={scrollRight}
+        sx={{
+          position: "absolute",
+          right: 10,
+          top: "50%",
+          transform: "translateY(-50%)",
+          zIndex: 1,
+          backgroundColor: "rgba(43, 40, 40, 0.42)",
+          color: "white",
+          "&:hover": {
+            backgroundColor: "rgba(255, 255, 255, 0.1)",
+          },
+        }}
+      >
+        <ChevronRight />
+      </IconButton>
+
       <Box
+        ref={containerRef}
         sx={{
           display: "flex",
+          justifyContent: "center",
           overflowX: "auto",
           gap: 4,
           padding: "20px 10px",
           scrollSnapType: "x mandatory",
+          maxWidth: "1200px",
+          margin: "0 auto",
           "&::-webkit-scrollbar": {
             height: "8px",
           },
           "&::-webkit-scrollbar-thumb": {
-            backgroundColor: "#28282B",
+            backgroundColor: blueGrey[500],
             borderRadius: "4px",
           },
         }}
@@ -90,6 +145,8 @@ const Projects = () => {
               minWidth: 300,
               scrollSnapAlign: "start",
               transition: "transform 0.3s ease-in-out",
+              backgroundColor: "#27272a", // Slightly lighter than background
+              color: "white",
               "&:hover": {
                 transform: "scale(1.05)",
               },
@@ -101,19 +158,19 @@ const Projects = () => {
               height="140"
               image={project.image}
             />
-            <CardContent sx={{ backgroundColor: "#28282B" }}>
+            <CardContent>
               <Typography gutterBottom variant="h5" component="div">
                 {project.title}
               </Typography>
-              <Typography variant="body2" sx={{ backgroundcolor:"#28282B", fontSize: "1rem", fontWeight: 500 }}>
+              <Typography variant="body2" sx={{ color: "rgba(255, 255, 255, 0.7)" }}>
                 {project.description}
               </Typography>
             </CardContent>
             <CardActions>
-              <Button size="small" href="#">
+              <Button size="small" sx={{ color: "#00bfff" }}>
                 View
               </Button>
-              <Button size="small" href={project.link}>
+              <Button size="small" href={project.link} sx={{ color: "#00bfff" }}>
                 Source Code
               </Button>
             </CardActions>
