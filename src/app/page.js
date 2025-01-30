@@ -8,7 +8,8 @@ import HeroSection from "../app/components/HeroSection";
 import AboutMe from "../app/components/AboutMe";    
 import Projects from "../app/components/Projects";  
 import Footer from "../app/components/Footer";   
-import Skills from "../app/components/Skills";   
+import Skills from "../app/components/Skills"; 
+import ContactMe from "../app/components/ContactMe";  
 
 const Home = () => {
   useEffect(() => {
@@ -23,6 +24,7 @@ const Home = () => {
       <AboutMe />
       <Projects />
       <Skills/>
+      <ContactMe/>
       <Footer />
     </>
   );

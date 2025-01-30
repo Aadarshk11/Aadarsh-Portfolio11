@@ -4,7 +4,7 @@ import * as React from 'react';
 
 const Skills = () => {
   return (
-    <Box sx={{ textAlign: 'center', padding: 3 }}>
+    <Box sx={{ textAlign: 'center', padding: 3 }}id="skills">
       {/* Title */}
       <Typography variant="h4" sx={{ fontWeight: 600, marginBottom: 5, color: blue[900] }}>
         My Skills
