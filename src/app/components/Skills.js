@@ -33,7 +33,7 @@ const Skills = () => {
   >
     <CardMedia
       component="img"
-      image="/Picture1.png"
+      image="/Picture2.png"
       alt="Skills Overview"
       sx={{
         width: '100%',
