@@ -44,7 +44,7 @@ const ContactMe = () => {
                 <IconButton href="https://github.com/Aadarshk11" target="_blank" sx={{ color: "#000" }}>
                   <GitHub fontSize="large" />
                 </IconButton>
-                <IconButton href="https://github.com/Aadarshk11" target="_blank" sx={{ color: "#f1f1f1" }}>
+                <IconButton href="https://leetcode.com/u/Aadarshk11/" target="_blank" sx={{ color: "#f1f1f1" }}>
                   <SiLeetcode fontSize="large" />
                 </IconButton>
                 <IconButton href="https://www.instagram.com/aadarsh_kasturey1128" target="_blank" sx={{ color: "#E4405F" }}>
