@@ -38,19 +38,19 @@ const ContactMe = () => {
 
               {/* Social Icons */}
               <Box sx={{ display: "flex", justifyContent: "center", gap: 2 }}>
-                <IconButton href="https://www.linkedin.com/in/your-profile" target="_blank" sx={{ color: "#0077b5" }}>
+                <IconButton href="https://www.linkedin.com/in/aadarshhistory/" target="_blank" sx={{ color: "#0077b5" }}>
                   <LinkedIn fontSize="large" />
                 </IconButton>
-                <IconButton href="https://github.com/your-profile" target="_blank" sx={{ color: "#000" }}>
+                <IconButton href="https://github.com/Aadarshk11" target="_blank" sx={{ color: "#000" }}>
                   <GitHub fontSize="large" />
                 </IconButton>
-                <IconButton href="https://www.leetcode.com/your-profile" target="_blank" sx={{ color: "#f1f1f1" }}>
+                <IconButton href="https://github.com/Aadarshk11" target="_blank" sx={{ color: "#f1f1f1" }}>
                   <SiLeetcode fontSize="large" />
                 </IconButton>
-                <IconButton href="https://www.instagram.com/your-profile" target="_blank" sx={{ color: "#E4405F" }}>
+                <IconButton href="https://www.instagram.com/aadarsh_kasturey1128" target="_blank" sx={{ color: "#E4405F" }}>
                   <Instagram fontSize="large" />
                 </IconButton>
-                <IconButton href="https://discord.com/users/your-id" target="_blank" sx={{ color: "#7289da" }}>
+                <IconButton href="discordapp.com/users/aadarsh2648" target="_blank" sx={{ color: "#7289da" }}>
                   <FaDiscord fontSize="large" />
                 </IconButton>
               </Box>

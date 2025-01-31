@@ -18,7 +18,7 @@ const Footer = () => {
             }}
           >
             Designed and developed by <strong>Aadarsh Kasturey</strong><a 
-              href="https://your-link.com" 
+              href="https://github.com/Aadarshk11/Aadarsh-Portfolio11" 
               target="_blank" 
               rel="noopener noreferrer" 
               style={{ 
