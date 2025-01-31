@@ -30,28 +30,28 @@ const Projects = () => {
     {
       title: "Sampoorna",
       description: "The Sampoorna Club Website is a dynamic web platform designed to view, notify, and update events for various clubs in my college. It serves as a centralized hub for students to stay informed about upcoming events, announcements, and club activities. The backend leverages PHP, AJAX, JavaScript, jQuery, MySQL, HTML, CSS and Bootstrap making the platform reliable, scalable, engagement for students.",
-      image: "/pexels-lynxexotics-4143660.jpg",
+      image: "/sampoorna.png",
       link: "#projects",
       link1:'https://iips.edu.in/sampoorna/Sampoorna.php',
     },
     {
       title: "CouponMania",
       description: "CouponMania is a feature-rich Android application designed to display advertisements for coupons, enabling users to discover and access the best deals effortlessly. It provides a user-friendly interface to showcase promotional offers and utilizes a Firebase Realtime Database to store user-generated data, along with advertisements of coupons, ensuring real-time updates and synchronization across devices.",
-      image: "/pexels-lynxexotics-4143660.jpg",
+      image: "/download.jpg",
       link: "https://github.com/Aadarshk11/CouponAdvantage",
       link1:'#projects',
     },
     {
       title: "ArtistryValue",
       description: "This web application is designed to showcase and sell handmade crafts and artisan goods, providing a platform for artisans to share their unique creations with a wider audience. Built using the MERN stack (MongoDB, Express.js, React, Node.js). It supports full CRUD (Create, Read, Update, Delete) operations, allowing users to effortlessly list, manage, and update their handmade products.",
-      image: "/pexels-lynxexotics-4143660.jpg",
+      image: "/WhatsApp-Image-2021-04-02-at-10.19.20-AM.jpeg",
       link: "https://github.com/Aadarshk11/ArtistryValue",
       link1:'#projects',
     },
     {
       title: "LDSS",
       description: "The Legal Decision Support System is an AI-powered prototype designed to assist users by providing accurate responses to legal queries, ensuring accessibility to legal information with ease and efficiency. Integrated LLMs to achieve this. Leveraging AI agents, it integrates natural language processing (NLP) and machine learning (ML) techniques to interpret legal terminology and offer well-informed guidance.",
-      image: "/pexels-lynxexotics-4143660.jpg",
+      image: "/0_YK6VY3H_qNUSCTS0.jpg",
       link: "https://github.com/Aadarshk11/LDSS",
       link1:'#projects',
     },
@@ -165,8 +165,12 @@ const Projects = () => {
             <CardMedia
               component="img"
               alt={project.title}
-              height="140"
+              
               image={project.image}
+              sx={{
+                height: 180, // Adjust this as needed
+                objectFit: "cover",
+              }}
             />
             <CardContent>
               <Typography gutterBottom variant="h5" component="div">
