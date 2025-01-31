@@ -63,9 +63,8 @@ const AboutMe = () => {
           }}
         >
           <Typography variant="body1" paragraph sx={{ color: "#FFFFFF", lineHeight: 1.8 }}>
-            I'm a Full-Stack Developer with a passion for creating intuitive and responsive
-            websites. I have experience with modern web technologies like React, Node.js,
-            and more. I love solving complex problems and turning ideas into reality.
+          I am currently pursuing my Master's in Computer Applications (MCA) from the International Institute of Professional Studies, Devi Ahilya Vishwavidyalaya.<br></br><br></br>
+          I am a passionate Full-Stack Developer who enjoys solving problems and turning ideas into reality.
             <br></br><br></br>My main focus is on developing scalable and efficient solutions, and I love learning new technologies. I’m always looking for exciting challenges and opportunities to collaborate with like-minded individuals.
           </Typography>
           <Button
@@ -77,12 +76,14 @@ const AboutMe = () => {
               fontSize: "1rem",
               fontWeight: 600,
               textTransform: "none",
-              
               "&:hover": {
                 animation: "none",
                 transform: "scale(1.05)",
               },
             }}
+            href="/1719220217986.pdf" 
+            target="_blank"
+            download 
           >
             Download Resume
           </Button>
