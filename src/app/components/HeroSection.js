@@ -33,7 +33,7 @@ const HeroSection = () => {
       {/* Profile Photo */}
       <Box
         component="img"
-        src="/gayatri-malhotra-EJWaKVPB6iI-unsplash.jpg"
+        src="/IMG_1981.JPG"
         alt="Profile"
         sx={{
           width: "180px",
