@@ -33,7 +33,7 @@ const HeroSection = () => {
       {/* Profile Photo */}
       <Box
         component="img"
-        src="/IMG_1981.JPG"
+        src="/1000073596.png"
         alt="Profile"
         sx={{
           width: "180px",
