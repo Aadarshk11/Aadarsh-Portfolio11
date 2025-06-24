@@ -81,7 +81,7 @@ const AboutMe = () => {
                 transform: "scale(1.05)",
               },
             }}
-            href="/Aadarsh's Resume.pdf" 
+            href="/AadarshResume.pdf" 
             target="_blank"
             download 
           >
